@@ -6,6 +6,8 @@ var userMiddleware = require("../../middleware/auth");
 
 // AUTH Routes
 api.get("/v1/auth/get-access-token", userMiddleware.getAccessToken);
+api.get("/v1/auth/check-token", userMiddleware.isAuth);
+api.get("/v1/auth/get-access-token-service", userMiddleware.authWithUrl);
 
 // api.get("/v2/auth/register", userMiddleware.isAuthPrymary,ControllerV2.register);
 // api.get("/v2/auth/checkemail/:email", ControllerV2.checkemail);
