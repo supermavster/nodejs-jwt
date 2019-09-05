@@ -1,6 +1,9 @@
 module.exports = {
+  // Hosting
   HOSTNAME: process.env.HOSTNAME || "127.0.0.1",
   PORT: process.env.PORT || 9001,
-  TOKEN_SECRET: process.env.TOKEN_SECRET || "JWT2019Kub0L0g1n",
-  TOKEN_SECRET_ACCESS: process.env.TOKEN_SECRET || "JWT2019Kub04cc3ssT0k3n"
+  // Secret Values
+  IV: process.env.IV || "r0c8t09cc40s=j9a",
+  KEY_TOKEN_API: process.env.KEY_TOKEN_API || "1e+ertsa97-hsvr2",
+  SECRET_API: process.env.SECRET_API || "5f573su1i+=1jt3d"
 };

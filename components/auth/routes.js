@@ -6,20 +6,12 @@ var userMiddleware = require("../../middleware/auth");
 
 // AUTH Routes
 api.get("/v1/auth/get-access-token", userMiddleware.getAccessToken);
+api.get("/v1/auth/get-auth-token", userMiddleware.getAuthToken);
 api.get("/v1/auth/check-token", userMiddleware.isAuth);
+// Optional
 api.get("/v1/auth/get-access-token-service", userMiddleware.authWithUrl);
 
-// api.get("/v2/auth/register", userMiddleware.isAuthPrymary,ControllerV2.register);
-// api.get("/v2/auth/checkemail/:email", ControllerV2.checkemail);
-// api.post("/v2/auth/login", userMiddleware.isAuthPrymary, ControllerV2.login);
-// api.get("/v2/auth/me", userMiddleware.isAuth, ControllerV2.me);
-// api.put("/v2/auth/update-me", userMiddleware.isAuth, ControllerV2.updateme);
-// api.put("/v2/auth/set-pass", userMiddleware.isAuth, ControllerV2.setPass);
-// api.post("/v2/user/set-avatar", userMiddleware.isAuth, ControllerV2.setAvatar);
-// api.get("/v2/auth/test", userMiddleware.isAuthPrymary);
-// api.get("/v2/auth/gen-new-password/:email", ControllerV2.generateRandomPass);
-// api.post("/v2/auth/push", ControllerV2.sendPush);
-// api.get("/v2/notif-center/get-notifications", ControllerV2.getNotifications);
-// api.get("/v2/cms/get-users", ControllerV2.getusers);
+// Example Login
+api.get("/v1/auth/login", userMiddleware.isAuthPrymary, ControllerV1.login);
 
 module.exports = api;

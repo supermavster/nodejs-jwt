@@ -16,15 +16,19 @@ server.listen(config.PORT, config.HOSTNAME, () => {
 
   // Show Api - Example
   console.log(
-    `\nTo Generate Token: http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/get-access-token\n`
+    `\nTo Generate Access Token (Header: X-AC-Access-Token): http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/get-access-token\n`
   );
   // Show Api - Example
   console.log(
-    `\nTo Check Token (Header: x_td_auth_token): http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/check-token\n`
+    `\nTo Generate Auth Token (Header: X-AC-Auth-Token): http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/get-auth-token\n`
   );
   // Show Api - Example
   console.log(
-    `\nTo Generate Token with a Service (POST): http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/get-access-token-service\n`
+    `\nTo Check Token: http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/check-token\n`
+  );
+  // Some Example
+  console.log(
+    `\nExample Login: http://${config.HOSTNAME}:${config.PORT}/api/v1/auth/login\n`
   );
 });
 
